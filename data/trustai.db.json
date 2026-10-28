@@ -1,0 +1,246 @@
+{
+  "users": [
+    {
+      "id": "usr_demo_101",
+      "email": "demo@affecio.safety",
+      "displayName": "Alex Rivers (Judge Demo)",
+      "role": "user",
+      "passwordHash": "c83d9982f8f570f258d172e60233c8ca:e545cc0e40fa1ad7441d912296d5b4e115388eda3fb144b267cb7b6f46d6fc7b4781323f9da5df2672094ff168d5e7855ee6c2256b61e3de47cdf4791d5d2410",
+      "createdAt": "2026-10-28T17:29:52.200Z"
+    },
+    {
+      "id": "usr_admin_001",
+      "email": "admin@affecio.safety",
+      "displayName": "Security Admin",
+      "role": "admin",
+      "passwordHash": "a76678e6bcb49a6339705be0c1c29dc3:fa9f4568a2497c5f120813f27953585a6269331f0f0897ed261eddb6df45dffecae1c8134cd36086c9d2828b430365f2f50a93a4deb265f917e513b6e2d8d178",
+      "createdAt": "2026-10-28T17:29:52.262Z"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "49791478ecc995c00084d08701cee7688fd84b103294933b200bfe0945ed3a6f",
+      "userId": "usr_admin_001",
+      "createdAt": "2026-10-28T17:30:05.734Z",
+      "expiresAt": "2026-10-31T17:30:05.734Z"
+    },
+    {
+      "token": "fd0de276be5351e88d879109664251518608017690ba66362608cd23f620b074",
+      "userId": "usr_demo_101",
+      "createdAt": "2026-10-28T17:30:10.722Z",
+      "expiresAt": "2026-10-31T17:30:10.722Z"
+    },
+    {
+      "token": "81635e131c73bb36d3c1d469dc0979b9c88e6506023d3ed92f8973a692468cb1",
+      "userId": "usr_admin_001",
+      "createdAt": "2026-10-28T17:52:25.449Z",
+      "expiresAt": "2026-10-31T17:52:25.449Z"
+    },
+    {
+      "token": "6bc9d647f9725a7def717e2a82cf8e3a1157baa7d26b0226866a2504ca3fd42a",
+      "userId": "usr_demo_101",
+      "createdAt": "2026-10-28T17:52:25.519Z",
+      "expiresAt": "2026-10-31T17:52:25.519Z"
+    }
+  ],
+  "analyses": [
+    {
+      "id": "anl_demo_801",
+      "userId": "usr_demo_101",
+      "inputContent": "Baby, I really need your help right now. My overseas oil rig bank account was frozen by customs in Cyprus and I can't fly back to see you unless you wire $850 in Apple gift cards or crypto USDT immediately. Please don't tell your friends, they won't understand our connection.",
+      "inputType": "message",
+      "contextCategory": "Money Request & Urgency",
+      "riskCategory": "Critical",
+      "riskScore": 94,
+      "confidenceScore": 92,
+      "findings": [
+        {
+          "id": "sig_1",
+          "category": "financial_pressure",
+          "categoryLabel": "Financial Solicitation",
+          "severity": "Critical",
+          "signalName": "Untraceable Payment Request",
+          "evidenceQuote": "wire $850 in Apple gift cards or crypto USDT immediately",
+          "explanation": "Scammers frequently request gift cards or cryptocurrency because transactions cannot be reversed or traced once redeemed.",
+          "relevanceWeight": 95
+        },
+        {
+          "id": "sig_2",
+          "category": "urgency_crisis",
+          "categoryLabel": "Fabricated Emergency",
+          "severity": "High",
+          "signalName": "High Pressure Urgency & Customs Barrier",
+          "evidenceQuote": "bank account was frozen by customs in Cyprus and I can't fly back to see you unless",
+          "explanation": "Classic romance scam trope: claiming an offshore profession (oil rig/military) and an immediate crisis requiring funds to travel.",
+          "relevanceWeight": 90
+        },
+        {
+          "id": "sig_3",
+          "category": "coercion_blackmail",
+          "categoryLabel": "Social Isolation",
+          "severity": "High",
+          "signalName": "Secrecy & Isolation Tactic",
+          "evidenceQuote": "Please don't tell your friends, they won't understand our connection",
+          "explanation": "Attempting to isolate the target from friends or family prevents second opinions and reality-checks.",
+          "relevanceWeight": 85
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "rec_1",
+          "priority": "Immediate",
+          "actionTitle": "Do Not Send Funds or Gift Cards",
+          "description": "Cease any financial transfer. Legitimate customs authorities never accept consumer retail gift cards or crypto transfers.",
+          "suggestedReply": "I am not comfortable sending money, gift cards, or crypto to anyone I have not met extensively in person.",
+          "actionType": "refuse"
+        },
+        {
+          "id": "rec_2",
+          "priority": "Immediate",
+          "actionTitle": "Preserve Conversation Records & Block",
+          "description": "Take screenshots of timestamps and contact handles for reporting before cutting contact.",
+          "actionType": "block"
+        },
+        {
+          "id": "rec_3",
+          "priority": "Important",
+          "actionTitle": "Consult a Trusted Friend or Relative",
+          "description": "Break the secrecy cycle. Share the messages with someone you trust in person.",
+          "actionType": "verify_offline"
+        }
+      ],
+      "analysisMethod": "hybrid_ai",
+      "aiProviderUsed": "Deterministic Rule Heuristics + Gemini Safety Engine",
+      "limitationsDisclaimer": "Advisory analysis based strictly on observable heuristic patterns. AFFECIO TRUSTAI does not access third-party platforms or verify real identity.",
+      "createdAt": "2026-10-28T13:29:52.262Z",
+      "isDemo": true
+    },
+    {
+      "id": "anl_demo_802",
+      "userId": "usr_demo_101",
+      "inputContent": "Hey Alex! Loved your photos from the hiking trail. Are you still down to grab coffee at Blue Bottle on 4th Street this Saturday at 2 PM? Let me know what time works for you!",
+      "inputType": "message",
+      "contextCategory": "General Conversation",
+      "riskCategory": "Low",
+      "riskScore": 6,
+      "confidenceScore": 95,
+      "findings": [],
+      "recommendations": [
+        {
+          "id": "rec_low_1",
+          "priority": "Advisory",
+          "actionTitle": "Follow Standard Public Meeting Safety",
+          "description": "The message shows normal, non-coercive conversation. As best practice, always meet in a well-lit public space and arrange your own transportation.",
+          "suggestedReply": "Hey! Saturday 2 PM at Blue Bottle sounds great. Looking forward to meeting you there!",
+          "actionType": "verify_offline"
+        }
+      ],
+      "analysisMethod": "rule_engine_baseline",
+      "limitationsDisclaimer": "Normal conversational indicators detected. Always use common sense and meet in public venues.",
+      "createdAt": "2026-10-27T21:29:52.262Z",
+      "isDemo": true
+    }
+  ],
+  "profileAnalyses": [],
+  "reports": [
+    {
+      "id": "rep_001",
+      "userId": "usr_demo_101",
+      "userEmail": "demo@affecio.safety",
+      "suspectHandle": "@richard_marine92",
+      "platform": "Tinder / Instagram",
+      "reportCategory": "money_solicitation",
+      "incidentDescription": "Claimed to be an engineer on a deep-sea rig in the North Sea. After 4 days of talking, asked for $500 Steam gift cards to buy satellite internet to video call me.",
+      "evidenceQuotes": "\"My satellite internet is cutting off, please buy me $500 Steam card so I can hear your voice tonight\"",
+      "status": "Received",
+      "suggestedProtections": [
+        "Block handle across Instagram and Tinder",
+        "Do not click external links",
+        "Submit platform abuse report"
+      ],
+      "createdAt": "2026-10-26T17:29:52.262Z"
+    }
+  ],
+  "privacySettings": {
+    "usr_demo_101": {
+      "userId": "usr_demo_101",
+      "retentionDays": 30,
+      "anonymizeAnalysisHistory": false,
+      "autoRedactSensitiveData": true,
+      "allowTelemetryAggregation": true,
+      "twoFactorEnabled": false,
+      "updatedAt": "2026-10-28T17:29:52.201Z"
+    },
+    "usr_admin_001": {
+      "userId": "usr_admin_001",
+      "retentionDays": 90,
+      "anonymizeAnalysisHistory": false,
+      "autoRedactSensitiveData": false,
+      "allowTelemetryAggregation": true,
+      "twoFactorEnabled": true,
+      "updatedAt": "2026-10-28T17:29:52.262Z"
+    }
+  },
+  "systemAuditLogs": [
+    {
+      "timestamp": "2026-10-28T17:52:25.519Z",
+      "action": "USER_LOGIN",
+      "userId": "usr_demo_101",
+      "details": "User demo@affecio.safety signed in."
+    },
+    {
+      "timestamp": "2026-10-28T17:52:25.461Z",
+      "action": "ACCOUNT_DELETED",
+      "userId": "usr_1793209945209_rub9mq",
+      "details": "Account and related records wiped."
+    },
+    {
+      "timestamp": "2026-10-28T17:52:25.450Z",
+      "action": "USER_LOGIN",
+      "userId": "usr_admin_001",
+      "details": "User admin@affecio.safety signed in."
+    },
+    {
+      "timestamp": "2026-10-28T17:52:25.389Z",
+      "action": "PRIVACY_UPDATED",
+      "userId": "usr_1793209945209_rub9mq",
+      "details": "Privacy settings modified."
+    },
+    {
+      "timestamp": "2026-10-28T17:52:25.383Z",
+      "action": "REPORT_FILED",
+      "userId": "usr_1793209945209_rub9mq",
+      "details": "Incident report rep_1793209945383_y8ubv1 created."
+    },
+    {
+      "timestamp": "2026-10-28T17:52:25.377Z",
+      "action": "ANALYSIS_DELETED",
+      "userId": "usr_1793209945209_rub9mq",
+      "details": "Analysis anl_1793209945357_89medg deleted."
+    },
+    {
+      "timestamp": "2026-10-28T17:52:25.357Z",
+      "action": "MESSAGE_ANALYZED",
+      "userId": "usr_1793209945209_rub9mq",
+      "details": "Analysis anl_1793209945357_89medg produced score 100"
+    },
+    {
+      "timestamp": "2026-10-28T17:52:25.273Z",
+      "action": "USER_REGISTERED",
+      "userId": "usr_1793209945209_rub9mq",
+      "details": "User test_1793209945184@affecio.test registered."
+    },
+    {
+      "timestamp": "2026-10-28T17:30:10.722Z",
+      "action": "USER_LOGIN",
+      "userId": "usr_demo_101",
+      "details": "User demo@affecio.safety signed in."
+    },
+    {
+      "timestamp": "2026-10-28T17:30:05.734Z",
+      "action": "USER_LOGIN",
+      "userId": "usr_admin_001",
+      "details": "User admin@affecio.safety signed in."
+    }
+  ]
+}

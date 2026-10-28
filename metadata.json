@@ -1,0 +1,6 @@
+{
+  "name": "AFFECIO TRUSTAI",
+  "description": "AI-Powered Dating Safety, Authenticity & Digital Trust Platform. Protect digital connections with real-time scam detection, risk scoring, explainable safety signals, and privacy-first controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
